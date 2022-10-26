@@ -1,0 +1,128 @@
+.hero .title:not(.is-spaced)+.subtitle {
+	margin-top: unset;
+}
+
+.timeline {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 0.4rem;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #3e8ed0;
+	z-index: -1;
+}
+
+.timeline .timeline-container {
+	position: relative;
+	width: 50%;
+	padding: 1rem 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.timeline .timeline-container-left {
+	left: 0;
+	text-align: right;
+}
+
+.timeline .timeline-container-right {
+	left: 50%;
+}
+
+.timeline .timeline-container::after {
+	content: '';
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	background-color: white;
+	border: 8px solid #FF9F55;
+	border-radius: 50%;
+	z-index: 1;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -16px;
+}
+
+.timeline .timeline-container .timeline-container-flag {
+	position: relative;
+}
+
+.timeline .timeline-container-left .timeline-container-flag::before {
+	content: '';
+	height: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -0.4rem;
+	width: 0;
+	z-index: 1;
+	border: medium solid #3e8ed0;
+	border-width: 0.4rem 0 0.4rem 0.4rem;
+	border-color: transparent transparent transparent #3e8ed0;
+}
+
+.timeline .timeline-container-right .timeline-container-flag::before {
+	content: '';
+	height: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0;
+	z-index: 1;
+	left: -0.4rem;
+	border: medium solid #3e8ed0;
+	border-width: 0.4rem 0.4rem 0.4rem 0;
+	border-color: transparent #3e8ed0 transparent transparent;
+}
+
+.timeline .timeline-container-right::after {
+	left: -16px;
+}
+
+.timeline .timeline-container .timeline-content {
+	padding: 1rem 1.5rem;
+	border-radius: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+	.timeline .timeline-container {
+		width: 100%;
+		text-align: center;
+	}
+
+	.timeline .timeline-container-right {
+		left: unset;
+	}
+
+	.timeline .timeline-container::before {
+		content: '';
+		display: block;
+		width: 32px;
+		height: 32px;
+		background-color: white;
+		border: 8px solid #FF9F55;
+		border-radius: 50%;
+		margin-bottom: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.timeline .timeline-container::after {
+		content: unset;
+	}
+
+	.timeline .timeline-container .timeline-container-flag::before {
+		content: unset;
+	}
+
+	.timeline .timeline-container .timeline-content {
+		background-color: #f5f5f5;
+	}
+}
