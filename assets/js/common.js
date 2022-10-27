@@ -71,8 +71,44 @@
 		}
 	});
 
+	function textTypingEffect(elem, charIndex = 0, direction = 'right') {
+		let typingContent = elem.prop('typingContent');
+
+		if (charIndex == 0) {
+			elem.html('');
+		} else if (charIndex > typingContent.length) {
+			setTimeout(() => {
+				textTypingEffect(elem, (typingContent.length - 1), 'left');
+			}, 1000);
+
+			return;
+		} else if (charIndex < 0) {
+			setTimeout(() => {
+				textTypingEffect(elem, 0);
+			}, 1000);
+
+			return;
+		}
+
+		elem.html(typingContent.substr(0, charIndex));
+
+		setTimeout(() => {
+			textTypingEffect(elem, (direction == 'right' ? charIndex + 1 : charIndex - 1), direction);
+		}, 50);
+	}
+
+	function initTypingEffect() {
+		$('.typing-effect').each(function() {
+			let initialContent = $(this).text();
+
+			$(this).prop('typingContent', initialContent);
+
+			textTypingEffect($(this));
+		});
+	}
+
 	$(document).ready(function() {
-		// 
+		initTypingEffect();
 	});
 
 }) (jQuery);

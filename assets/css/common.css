@@ -130,3 +130,13 @@
 .has-text-orange {
 	color: #fe7b00;
 }
+
+@keyframes blinkingText {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.typing-effect::after {
+	content: '|';
+	animation: blinkingText 1s infinite;
+}
