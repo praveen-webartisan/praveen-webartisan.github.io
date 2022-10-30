@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 <head>
 	<meta charset="utf-8">
 
@@ -21,7 +21,7 @@
 </head>
 <body>
 
-	<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+	<nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
 		<div class="container">
 			<div class="navbar-brand">
 				<a class="navbar-item" href="/">
@@ -37,55 +37,73 @@
 
 			<div id="mainNav" class="navbar-menu">
 				<div class="navbar-end">
-					<a class="navbar-item" href="/pages/about.html">About</a>
+					<a class="navbar-item" href="#about">
+						<i class="icofont-user-suited"></i><span class="ml-1">About</span>
+					</a>
 
-					<a class="navbar-item" href="/pages/contact.html">Contact</a>
+					<a class="navbar-item" href="#works">
+						<i class="icofont-code"></i><span class="ml-1">My Works</span>
+					</a>
+
+					<a class="navbar-item" href="#contact">
+						<i class="icofont-phone"></i><span class="ml-1">Contact</span>
+					</a>
 				</div>
 			</div>
 		</div>
 	</nav>
 
-	<section class="hero is-light is-halfheight">
+	<section class="hero is-dark is-fullheight">
 		<div class="hero-body">
 			<div class="container">
-				<p class="title is-4">Hi, I'm Praveen</p>
+				<p class="subtitle">Hi, I'm Praveen</p>
 
-				<p class="title is-1 typing-effect">Full Stack Web and Mobile app Developer</p>
+				<p class="title is-1 mt-1 typing-effect">Full Stack Web and Mobile app Developer</p>
 
-				<p class="subtitle">I love to work in Web Development.</p>
+				<p class="subtitle">with a passion in Web Development</p>
 			</div>
 		</div>
 	</section>
 
-	<section class="section">
+	<section class="section is-medium" id="about">
 		<div class="container">
 			<div class="columns">
 
 				<div class="column">
-					<p class="title is-1">05+</p>
-					<p class="subtitle">Years of Experience</p>
+
+					<div class="columns mb-5">
+						<div class="column">
+							<p class="title is-3">About Me</p>
+
+							<p class="">Hello! I'm Praveen. Full Stack Web and Mobile app Developer with over 5 years of experience.</p>
+							<p class="mt-2">Experienced with all stages of the development cycle for Dynamic Web and Mobile applications.</p>
+							<p class="mt-2">Having in-depth knowledge including Laravel, WordPress, Angular, Flask.</p>
+							<p class="mt-2">With quick adaptability and learning skill.</p>
+						</div>
+					</div>
+
 				</div>
 
 				<div class="column">
 
 					<div class="columns">
 						<div class="column">
-							<p class="title is-3">I'm a Developer & Designer with a passion in Web Development</p>
+							<p class="title is-3">My Expertise Area</p>
 						</div>
 					</div>
 
-					<div class="columns">
+					<div class="columns has-text-centered">
 
 						<div class="column">
 							<div class="card">
 								<div class="card-content">
 									<div class="content">
-										<p class="title is-1 has-text-primary">
+										<p class="title is-1 has-text-success">
 											<i class="icofont-web"></i>
 										</p>
 									</div>
 									<div class="content">
-										<p>Web Development & Design</p>
+										<p>Website Design & Development</p>
 									</div>
 								</div>
 							</div>
@@ -95,12 +113,46 @@
 							<div class="card">
 								<div class="card-content">
 									<div class="content">
-										<p class="title is-1 has-text-info">
+										<p class="title is-1 has-text-success">
+											<i class="icofont-dashboard-web"></i>
+										</p>
+									</div>
+									<div class="content">
+										<p>Web applications design & Development</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="column">
+							<div class="card">
+								<div class="card-content">
+									<div class="content">
+										<p class="title is-1 has-text-success">
 											<i class="icofont-plugin"></i>
 										</p>
 									</div>
 									<div class="content">
-										<p>Web browser Extensions</p>
+										<p>Web browser Extensions Development</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="columns has-text-centered">
+
+						<div class="column">
+							<div class="card">
+								<div class="card-content">
+									<div class="content">
+										<p class="title is-1 has-text-link">
+											<i class="icofont-ui-touch-phone"></i>
+										</p>
+									</div>
+									<div class="content">
+										<p>Cross Platform applications Development</p>
 									</div>
 								</div>
 							</div>
@@ -110,12 +162,12 @@
 							<div class="card">
 								<div class="card-content">
 									<div class="content">
-										<p class="title is-1 has-text-danger">
-											<i class="icofont-ui-touch-phone"></i>
+										<p class="title is-1 has-text-dark">
+											<i class="icofont-terminal"></i>
 										</p>
 									</div>
 									<div class="content">
-										<p>Mobile app Development</p>
+										<p>Command Line Applications Development</p>
 									</div>
 								</div>
 							</div>
@@ -129,17 +181,789 @@
 		</div>
 	</section>
 
-	<section class="section has-background-light">
+	<section class="section has-background-light is-medium"></section>
+
+	<section class="section is-medium">
 		<div class="container">
-			<p class="title is-3">About Me</p>
 
-			<p class="">I have been working in Web Development for more than 5 years and, more than 3 years in Mobile app Development. I have worked in more than 20 projects and have been a leading Developer in 10+ projects, more than 5 freelance works.</p>
+			<div class="columns">
+				<div class="column">
+					<p class="title is-3">Professional skills</p>
+				</div>
+			</div>
 
-			<p class="mt-3">
-				<a href="/pages/about.html" class="button is-rounded is-link">More</a>
-			</p>
+			<div class="columns">
+				<div class="column">
+					<p>
+						<span class="title is-5">Laravel</span>
+						<progress class="progress is-small is-link" value="80" max="100">80%</progress>
+					</p>
+				</div>
+
+				<div class="column">
+					<p>
+						<span class="title is-5">WordPress</span>
+						<progress class="progress is-small is-link" value="70" max="100">70%</progress>
+					</p>
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+					<p>
+						<span class="title is-5">Flask</span>
+						<progress class="progress is-small is-link" value="75" max="100">75%</progress>
+					</p>
+				</div>
+
+				<div class="column">
+					<p>
+						<span class="title is-5">Angular</span>
+						<progress class="progress is-small is-link" value="50" max="100">50%</progress>
+					</p>
+				</div>
+			</div>
+
+			<div class="columns mb-5">
+				<div class="column">
+					<p>
+						<span class="title is-5">React</span>
+						<progress class="progress is-small is-link" value="40" max="100">40%</progress>
+					</p>
+				</div>
+
+				<div class="column"></div>
+			</div>
+
+			<div class="columns mt-5">
+				<div class="column">
+					<p>
+						<span class="title is-5">PHP</span>
+						<progress class="progress is-small is-link" value="80" max="100">80%</progress>
+					</p>
+				</div>
+
+				<div class="column">
+					<p>
+						<span class="title is-5">Python</span>
+						<progress class="progress is-small is-link" value="75" max="100">75%</progress>
+					</p>
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+					<p>
+						<span class="title is-5">Java</span>
+						<progress class="progress is-small is-link" value="60" max="100">60%</progress>
+					</p>
+				</div>
+
+				<div class="column">
+					<p>
+						<span class="title is-5">Go</span>
+						<progress class="progress is-small is-link" value="65" max="100">65%</progress>
+					</p>
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+					<p>
+						<span class="title is-5">HTML</span>
+						<progress class="progress is-small is-link" value="85" max="100">85%</progress>
+					</p>
+				</div>
+
+				<div class="column">
+					<p>
+						<span class="title is-5">CSS</span>
+						<progress class="progress is-small is-link" value="95" max="100">95%</progress>
+					</p>
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+					<p>
+						<span class="title is-5">JavaScript</span>
+						<progress class="progress is-small is-link" value="90" max="100">90%</progress>
+					</p>
+				</div>
+
+				<div class="column"></div>
+			</div>
+
 		</div>
 	</section>
+
+	<section class="section has-background-light is-medium"></section>
+
+	<section class="section is-medium" id="works">
+		<div class="container">
+
+			<div class="columns">
+				<div class="column">
+					<p class="title is-3">Some of My Works</p>
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-dashboard-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">iTrack</p>
+									<p>Cloud based Medical Diagnostic Instruments performance tracking system</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">laravel</span> <span class="tag is-info is-light is-rounded">bootstrap</span> <span class="tag is-info is-light is-rounded">jquery</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-web"></i>
+									<i class="icofont-dashboard-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://how-to-repair.com" target="_blank">How to Repair</a>
+									</p>
+									<p>Appliance spare parts website with free video tutorials to help customers fix the appliances on their own</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">magento</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://how-to-repair.com" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-web"></i>
+									<i class="icofont-dashboard-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://www.kanchiorganicfarms.com" target="_blank">Kanchi Organic Farms</a>
+									</p>
+									<p>E-commerce website to buy Organic products around Chennai</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">wordpress</span> <span class="tag is-info is-light is-rounded">laravel</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://www.kanchiorganicfarms.com" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1">
+									<i class="icofont-dashboard-web has-text-success"></i>
+									<i class="icofont-ui-touch-phone has-text-link"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">FundsFair</p>
+									<p>Loan Marketplace platform that brings together all the stakeholders in the Loans Landscape</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">wordpress</span> <span class="tag is-info is-light is-rounded">laravel</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-dashboard-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">IFRS</p>
+									<p>Future prediction system for Banks</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">laravel</span> <span class="tag is-info is-light is-rounded">c++</span> <span class="tag is-info is-light is-rounded">python</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-dark">
+									<i class="icofont-terminal"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://github.com/team-proflujo/rubixHCPMiddleware" target="_blank">Rubix HCP Middleware</a>
+									</p>
+									<p>Middleware program to access Rubix Wallet Data from HCP Vault</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">go</span> <span class="tag is-info is-light is-rounded">hashicorp-vault</span> <span class="tag is-info is-light is-rounded">rubix</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://github.com/team-proflujo/rubixHCPMiddleware" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="column">
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-web"></i>
+									<i class="icofont-dashboard-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">OpenIT Travel System</p>
+									<p>Trip Management and Billing software for Travel & Transport companies with Tally data communication capability</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">laravel</span> <span class="tag is-info is-light is-rounded">bootstrap</span> <span class="tag is-info is-light is-rounded">jquery</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1">
+									<i class="icofont-dashboard-web has-text-success"></i>
+									<i class="icofont-ui-touch-phone has-text-link"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">Tasks@Proflujo</p>
+									<p>Customized tasks management application</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">laravel</span> <span class="tag is-info is-light is-rounded">flutter</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-link">
+									<i class="icofont-ui-touch-phone"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">GeoTag</p>
+									<p>Location tracking app</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">android</span> <span class="tag is-info is-light is-rounded">java</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1">
+									<i class="icofont-dashboard-web has-text-success"></i>
+									<i class="icofont-ui-touch-phone has-text-link"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">FourthForce</p>
+									<p>Background verification app</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">laravel</span> <span class="tag is-info is-light is-rounded">bootstrap</span> <span class="tag is-info is-light is-rounded">jquery</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1">
+									<i class="icofont-dashboard-web has-text-success"></i>
+									<i class="icofont-ui-touch-phone has-text-link"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://sacola.io" target="_blank">Sacola</a>
+									</p>
+									<p>Wallet UI for Rubix Blockchain platform</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">wordpress</span> <span class="tag is-info is-light is-rounded">laravel</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://sacola.io" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="section has-background-light is-medium"></section>
+
+	<section class="section is-medium">
+		<div class="container">
+
+			<div class="columns">
+				<div class="column">
+					<p class="title is-3">Hobbies & Personal projects</p>
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-dark">
+									<i class="icofont-terminal"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://gist.github.com/praveen-tamil/320ee2c87c386d3bc083640bb07de812" target="_blank">AES Encryption in Java</a>
+									</p>
+									<p>AES encryption implementation in Java</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">aes-encryption</span> <span class="tag is-info is-light is-rounded">java</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://gist.github.com/praveen-tamil/320ee2c87c386d3bc083640bb07de812" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-dashboard-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://github.com/praveen-tamil/PHP-Crud" target="_blank">PHP Crud</a>
+									</p>
+									<p>MySQL CRUD operations in single PHP file with Login and Signup</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">php</span> <span class="tag is-info is-light is-rounded">mysql</span> <span class="tag is-info is-light is-rounded">materializecss</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://github.com/praveen-tamil/PHP-Crud" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-dashboard-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://github.com/praveen-tamil/ng-bs-admin" target="_blank">Ng BS Admin</a>
+									</p>
+									<p>Angular project Template with Bootstrap 5 design implemented</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">angular</span> <span class="tag is-info is-light is-rounded">bootstrap</span> <span class="tag is-info is-light is-rounded">icofont</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://github.com/praveen-tamil/ng-bs-admin" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-plugin"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://chrome.google.com/webstore/detail/adminer-helper/edgabamjcoahlnhelppganhieempbgbf" target="_blank">Adminer Helper</a>
+									</p>
+									<p>An Helper extension for Adminer.php to storing, retrieving SQL queries executed on the SQL commands</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">javascript</span> <span class="tag is-info is-light is-rounded">html</span> <span class="tag is-info is-light is-rounded">css</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://chrome.google.com/webstore/detail/adminer-helper/edgabamjcoahlnhelppganhieempbgbf" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://rolladice.vercel.app" target="_blank">Roll a Dice</a>
+									</p>
+									<p>Dice rolling simulator</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">html</span> <span class="tag is-info is-light is-rounded">css</span> <span class="tag is-info is-light is-rounded">javascript</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://rolladice.vercel.app" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-dashboard-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://funnybuddybot.herokuapp.com" target="_blank">Funny buddy</a>
+									</p>
+									<p>A Telegram bot to get useful and funny information</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">python</span> <span class="tag is-info is-light is-rounded">flask</span> <span class="tag is-info is-light is-rounded">bulma-css</span> <span class="tag is-info is-light is-rounded">materialdesignicons</span> <span class="tag is-info is-light is-rounded">jquery</span> <span class="tag is-info is-light is-rounded">heroku-app</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://funnybuddybot.herokuapp.com" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-dark">
+									<i class="icofont-terminal"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://gist.github.com/praveen-tamil/058203d0e140f1e109caec6fd0ffa744" target="_blank">Custom SSH Command</a>
+									</p>
+									<p>Customize SSH command in Bash script to access Nodes easily</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">bash</span> <span class="tag is-info is-light is-rounded">ssh</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://gist.github.com/praveen-tamil/058203d0e140f1e109caec6fd0ffa744" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="column">
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-dark">
+									<i class="icofont-terminal"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://gist.github.com/praveen-tamil/9bd4988f1900bf14738f53c9b2ef35cd" target="_blank">AES Encryption in Python</a>
+									</p>
+									<p>AES encryption implementation in Python</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">aes-encryption</span> <span class="tag is-info is-light is-rounded">python</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://gist.github.com/praveen-tamil/9bd4988f1900bf14738f53c9b2ef35cd" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-plugin"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://wordpress.org/plugins/sticky-action-buttons" target="_blank">Sticky Action Buttons</a>
+									</p>
+									<p>Click to Call, Mail, WhatsApp chat buttons for WordPress websites</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">php</span> <span class="tag is-info is-light is-rounded">html</span> <span class="tag is-info is-light is-rounded">css</span> <span class="tag is-info is-light is-rounded">jquery</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://wordpress.org/plugins/sticky-action-buttons" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-link">
+									<i class="icofont-ui-touch-phone"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://github.com/praveen-tamil/flutter-project-template" target="_blank">Flutter project template</a>
+									</p>
+									<p>Template to Quick Start a Flutter Project</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">flutter</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://github.com/praveen-tamil/flutter-project-template" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-plugin"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://chrome.google.com/webstore/detail/block-it-for-me/mhdonialcdjehbakhkfkalpboogiidhg" target="_blank">Block it for me</a>
+									</p>
+									<p>A Site blocker</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">javascript</span> <span class="tag is-info is-light is-rounded">html</span> <span class="tag is-info is-light is-rounded">css</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://chrome.google.com/webstore/detail/block-it-for-me/mhdonialcdjehbakhkfkalpboogiidhg" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-dashboard-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://getmeapassword.herokuapp.com" target="_blank">Get me a password</a>
+									</p>
+									<p>Random Password Generator Web app</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">python</span> <span class="tag is-info is-light is-rounded">flask</span> <span class="tag is-info is-light is-rounded">bulma-css</span> <span class="tag is-info is-light is-rounded">jquery</span> <span class="tag is-info is-light is-rounded">heroku-app</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://getmeapassword.herokuapp.com" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-dark">
+									<i class="icofont-terminal"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="https://github.com/praveen-tamil/useful-scripts" target="_blank">Useful scripts</a>
+									</p>
+									<p>Some of the useful scripts in many programming language</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">python</span> <span class="tag is-info is-light is-rounded">java</span> <span class="tag is-info is-light is-rounded">php</span> <span class="tag is-info is-light is-rounded">javascript</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="https://github.com/praveen-tamil/useful-scripts" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-success">
+									<i class="icofont-web"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">
+										<a href="/happy-diwali" target="_blank">Happy Diwali</a>
+									</p>
+									<p>A simple Diwali wish site</p>
+									<p>
+										<span class="tag is-info is-light is-rounded">html</span> <span class="tag is-info is-light is-rounded">bulma-css</span> <span class="tag is-info is-light is-rounded">jquery</span> <span class="tag is-info is-light is-rounded">fireworks-js</span> <span class="tag is-info is-light is-rounded">html2canvas</span>
+									</p>
+								</div>
+							</div>
+							<div class="media-right">
+								<a href="/happy-diwali" target="_blank">
+									<i class="icofont-external-link"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+
+				</div>
+
+				<div class="column">
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="section has-background-light is-medium"></section>
 
 	<section class="section">
 		<div class="container">
@@ -185,27 +1009,227 @@
 		</div>
 	</section>
 
+	<section class="section has-background-light is-medium"></section>
+
+	<section class="section is-medium" id="contact">
+		<div class="container">
+
+			<div class="columns">
+
+				<div class="column is-narrow-tablet">
+
+					<p class="title is-3">Contact Me</p>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<figure class="image is-64x64">
+									<svg width="48" height="48" viewBox="0 0 256 249" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><g fill="#161614"><path d="M127.505 0C57.095 0 0 57.085 0 127.505c0 56.336 36.534 104.13 87.196 120.99 6.372 1.18 8.712-2.766 8.712-6.134 0-3.04-.119-13.085-.173-23.739-35.473 7.713-42.958-15.044-42.958-15.044-5.8-14.738-14.157-18.656-14.157-18.656-11.568-7.914.872-7.752.872-7.752 12.804.9 19.546 13.14 19.546 13.14 11.372 19.493 29.828 13.857 37.104 10.6 1.144-8.242 4.449-13.866 8.095-17.05-28.32-3.225-58.092-14.158-58.092-63.014 0-13.92 4.981-25.295 13.138-34.224-1.324-3.212-5.688-16.18 1.235-33.743 0 0 10.707-3.427 35.073 13.07 10.17-2.826 21.078-4.242 31.914-4.29 10.836.048 21.752 1.464 31.942 4.29 24.337-16.497 35.029-13.07 35.029-13.07 6.94 17.563 2.574 30.531 1.25 33.743 8.175 8.929 13.122 20.303 13.122 34.224 0 48.972-29.828 59.756-58.22 62.912 4.573 3.957 8.648 11.717 8.648 23.612 0 17.06-.148 30.791-.148 34.991 0 3.393 2.295 7.369 8.759 6.117 50.634-16.879 87.122-64.656 87.122-120.973C255.009 57.085 197.922 0 127.505 0"/><path d="M47.755 181.634c-.28.633-1.278.823-2.185.389-.925-.416-1.445-1.28-1.145-1.916.275-.652 1.273-.834 2.196-.396.927.415 1.455 1.287 1.134 1.923M54.027 187.23c-.608.564-1.797.302-2.604-.589-.834-.889-.99-2.077-.373-2.65.627-.563 1.78-.3 2.616.59.834.899.996 2.08.36 2.65M58.33 194.39c-.782.543-2.06.034-2.849-1.1-.781-1.133-.781-2.493.017-3.038.792-.545 2.05-.055 2.85 1.07.78 1.153.78 2.513-.019 3.069M65.606 202.683c-.699.77-2.187.564-3.277-.488-1.114-1.028-1.425-2.487-.724-3.258.707-.772 2.204-.555 3.302.488 1.107 1.026 1.445 2.496.7 3.258M75.01 205.483c-.307.998-1.741 1.452-3.185 1.028-1.442-.437-2.386-1.607-2.095-2.616.3-1.005 1.74-1.478 3.195-1.024 1.44.435 2.386 1.596 2.086 2.612M85.714 206.67c.036 1.052-1.189 1.924-2.705 1.943-1.525.033-2.758-.818-2.774-1.852 0-1.062 1.197-1.926 2.721-1.951 1.516-.03 2.758.815 2.758 1.86M96.228 206.267c.182 1.026-.872 2.08-2.377 2.36-1.48.27-2.85-.363-3.039-1.38-.184-1.052.89-2.105 2.367-2.378 1.508-.262 2.857.355 3.049 1.398"/></g></svg>
+								</figure>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">GitHub</p>
+									<p>
+										<a href="https://github.com/praveen-tamil">github.com/praveen-tamil</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-orange">
+									<i class="icofont-stack-overflow"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">Stack Overflow</p>
+									<p>
+										<a href="https://stackoverflow.com/users/16351248">stackoverflow.com/users/16351248</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-link">
+									<i class="icofont-linkedin"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">LinkedIn</p>
+									<p>
+										<a href="https://www.linkedin.com/in/thisispraveenj">linkedin.com/in/thisispraveenj</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-info">
+									<i class="icofont-twitter"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">Twitter</p>
+									<p>
+										<a href="https://twitter.com/thisispraveenj">@thisispraveenj</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="media">
+							<div class="media-left">
+								<p class="title is-1 has-text-danger">
+									<i class="icofont-email"></i>
+								</p>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p class="title is-6">Email</p>
+									<p>
+										<a href="mailto:thisispraveenj@gmail.com">thisispraveenj@gmail.com</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="column">
+					<form id="contactForm" method="POST">
+
+						<div class="columns">
+							<div class="column">
+								<p class="title is-5">Drop a Message</p>
+							</div>
+						</div>
+
+						<div class="columns">
+
+							<div class="column">
+								<div class="field">
+									<label class="label">Your Name</label>
+									<div class="control has-icons-left">
+										<input type="text" class="input" name="name" placeholder="Enter your Name here" required>
+										<span class="icon is-small is-left">
+											<i class="icofont-user"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="column">
+								<div class="field">
+									<label class="label">Your Phone Number</label>
+									<div class="control has-icons-left">
+										<input type="text" class="input" name="phoneNo" placeholder="Enter your Phone Number here">
+										<span class="icon is-small is-left">
+											<i class="icofont-phone"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="columns">
+
+							<div class="column">
+								<div class="field">
+									<label class="label">Your Email Address</label>
+									<div class="control has-icons-left">
+										<input type="email" class="input" name="email" placeholder="Enter your Email Address here" required>
+										<span class="icon is-small is-left">
+											<i class="icofont-ui-email"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="column">
+								<div class="field">
+									<label class="label">Subject</label>
+									<div class="control has-icons-left">
+										<input type="text" class="input" name="subject" placeholder="Enter Subject here" required>
+										<span class="icon is-small is-left">
+											<i class="icofont-ui-message"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="columns">
+
+							<div class="column">
+								<div class="field">
+									<label class="label">Message</label>
+									<div class="control">
+										<textarea class="textarea" name="message" placeholder="Enter Message here" required></textarea>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="columns">
+
+							<div class="column">
+								<button class="button is-rounded is-info is-pulled-left">Send Message</button>
+							</div>
+
+						</div>
+
+					</form>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
 	<footer id="pageFooter" class="footer py-3">
 		<div class="container">
 
 			<div class="columns">
 				<div class="column">
-					<p>&copy; 2022. <strong>Praveen</strong> (github.com/praveen-tamil)</p>
-				</div>
-
-				<div class="column">
-					<a href="/pages/privacy-policy.html">Privacy Policy</a>
-				</div>
-
-				<div class="column">
+					<p>&copy; 2022. <strong>Praveen</strong> (github.com/praveen-tamil) All rights reserved.</p>
 					<p>
-						<a href="/pages/about.html">About</a>
+						Full Stack Web and Mobile app Developer with over 5 years of experience.
+					</p>
+				</div>
+
+				<div class="column has-text-centered-tablet">
+					<a href="/privacy-policy.html">Privacy Policy</a>
+				</div>
+
+				<div class="column has-text-centered-tablet">
+					<p>
+						<a href="#about">About</a>
 					</p>
 					<p class="mt-1">
-						<a href="/pages/my-apps.html">Apps</a>
+						<a href="#works">My Works</a>
 					</p>
 					<p class="mt-1">
-						<a href="/pages/contact.html">Contact</a>
+						<a href="#contact">Contact</a>
 					</p>
 				</div>
 			</div>

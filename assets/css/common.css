@@ -45,7 +45,7 @@
 	border: 8px solid #FF9F55;
 	border-radius: 50%;
 	z-index: 1;
-	top: 50%;
+	top: 30px;
 	transform: translateY(-50%);
 	right: -16px;
 }
@@ -139,4 +139,36 @@
 .typing-effect::after {
 	content: '|';
 	animation: blinkingText 1s infinite;
+}
+
+.parallax-container {
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.parallax-container > .parallax-bg {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.parallax-container > .parallax-content {
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+}
+
+.matrix-effect {
+	height: 100%;
+	width: 100%;
+}
+
+.box a {
+	word-break: break-word;
 }

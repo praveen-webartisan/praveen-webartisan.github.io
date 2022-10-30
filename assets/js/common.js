@@ -1,4 +1,5 @@
 (function($) {
+	const matrixEffectTileSize = 20, matrixEffectFadeFactor = 0.05;
 
 	// Initialize nav button for mobile new
 	$(document).on('click', '.navbar-burger', function() {
@@ -57,7 +58,7 @@
 		window.location.href = mailToURL;
 	});
 
-	$(document).on('mouseover', '#contactForm button', function(e) {
+	$(document).on('mouseover focus', '#contactForm button', function(e) {
 		if (isValidContactForm()) {
 			$(this).removeClass('is-pulled-left is-pulled-right');
 		} else {
@@ -68,6 +69,10 @@
 			} else {
 				$(this).addClass('is-pulled-right');
 			}
+		}
+
+		if ($(this).is(':focus')) {
+			$(this).blur();
 		}
 	});
 
@@ -107,8 +112,56 @@
 		});
 	}
 
+	function matrixEffect(canvas, context, columns, maxStackHeight) {
+		context.fillStyle = `rgba(0, 0, 0, ${matrixEffectFadeFactor})`;
+		context.fillRect(0, 0, canvas.width, canvas.height);
+
+		context.font = (matrixEffectTileSize - 2) + 'px monospace';
+		context.fillStyle = 'rgb(0, 255, 0)';
+
+		for (let i = 0; i < columns.length; ++i) {
+			let randomChar = String.fromCharCode(33 + Math.floor(Math.random() * 94));
+
+			context.fillText(randomChar, columns[i].x, columns[i].stackCounter * matrixEffectTileSize + matrixEffectTileSize);
+
+			if (++columns[i].stackCounter >= columns[i].stackHeight) {
+				columns[i].stackHeight = 10 + Math.random() * maxStackHeight;
+				columns[i].stackCounter = 0;
+			}
+		}
+
+		setTimeout(() => {
+			matrixEffect(canvas, context, columns, maxStackHeight);
+		}, 50);
+	}
+
+	function initMatrixEffect() {
+		$('.matrix-effect').each(function() {
+			const canvas = this;
+
+			canvas.width = canvas.offsetWidth;
+			canvas.height = canvas.offsetHeight;
+
+			const context = canvas.getContext('2d');
+
+			const maxStackHeight = Math.ceil(canvas.height / matrixEffectTileSize);
+			let columns = [];
+
+			for (let i = 0; i < canvas.width / matrixEffectTileSize; ++i) {
+				columns.push({
+					'x': i * matrixEffectTileSize,
+					'stackHeight': 10 + Math.random() * maxStackHeight,
+					'stackCounter': 0,
+				});
+			}
+
+			matrixEffect(canvas, context, columns, maxStackHeight);
+		});
+	}
+
 	$(document).ready(function() {
 		initTypingEffect();
+		initMatrixEffect();
 	});
 
 }) (jQuery);
