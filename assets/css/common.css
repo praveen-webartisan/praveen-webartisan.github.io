@@ -136,7 +136,7 @@
 	100% { opacity: 1; }
 }
 
-.typing-effect::after {
+.typing-effect.typing::after {
 	content: '|';
 	animation: blinkingText 1s infinite;
 }

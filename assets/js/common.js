@@ -53,7 +53,6 @@
 
 		let formValidation = isValidContactForm();
 		let mailToURL = encodeURI('mailto:thisispraveenj@gmail.com?body=' + (formValidation.data || '') + '&subject=' + (formValidation.subject || ''));
-		console.log(mailToURL);
 
 		window.location.href = mailToURL;
 	});
@@ -80,14 +79,29 @@
 		let typingContent = elem.prop('typingContent');
 
 		if (charIndex == 0) {
+			elem.addClass('typing');
 			elem.html('');
 		} else if (charIndex > typingContent.length) {
-			setTimeout(() => {
-				textTypingEffect(elem, (typingContent.length - 1), 'left');
-			}, 1000);
+			if (elem.prop('typingSeqElements') != undefined) {
+				$('.typing-effect[data-type-seq="' + elem.prop('typingSeqElements') + '"]').each(function() {
+					textTypingEffect($(this));
+				});
+
+				elem.removeProp('typingSeqElements');
+			}
+
+			if (elem.hasClass('type-infinite')) {
+				// After typed entire sentence, delete them
+				setTimeout(() => {
+					textTypingEffect(elem, (typingContent.length - 1), 'left');
+				}, 1000);
+			} else {
+				elem.removeClass('typing');
+			}
 
 			return;
 		} else if (charIndex < 0) {
+			// After deleted all the letters, start typing
 			setTimeout(() => {
 				textTypingEffect(elem, 0);
 			}, 1000);
@@ -103,12 +117,51 @@
 	}
 
 	function initTypingEffect() {
+		let seqList = [];
+
 		$('.typing-effect').each(function() {
 			let initialContent = $(this).text();
 
 			$(this).prop('typingContent', initialContent);
 
-			textTypingEffect($(this));
+			// Initialize sequenced containers later
+			if ($(this).attr('data-type-seq') == undefined) {
+				textTypingEffect($(this));
+			} else {
+				$(this).html('');
+
+				let seq = $(this).attr('data-type-seq');
+
+				if (seq.indexOf('-') > -1) {
+					seq = seq.split('-');
+
+					if (seq.length == 2) {
+						if (Number(seq[0]) != isNaN && Number(seq[1]) != isNaN) {
+							if (seqList[ seq[0] ] == undefined) {
+								seqList[ seq[0] ] = [
+									seq[1]
+								];
+							} else {
+								seqList[ seq[0] ].push( seq[1] );
+							}
+						}
+					}
+				}
+			}
+		});
+
+		seqList.sort();
+
+		seqList.forEach(function(seq, firstPart) {
+			seq.sort();
+
+			seq.forEach(function(secondPart, i) {
+				if (i < (seq.length - 1)) {
+					$(`.typing-effect[data-type-seq="${firstPart}-${ secondPart }"]`).prop('typingSeqElements', `${firstPart}-${seq[i + 1]}`);
+				}
+			});
+
+			textTypingEffect($(`.typing-effect[data-type-seq="${firstPart}-${ seq[0] }"]`));
 		});
 	}
 
