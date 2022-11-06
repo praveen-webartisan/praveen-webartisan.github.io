@@ -86,8 +86,6 @@
 				$('.typing-effect[data-type-seq="' + elem.prop('typingSeqElements') + '"]').each(function() {
 					textTypingEffect($(this));
 				});
-
-				elem.removeProp('typingSeqElements');
 			}
 
 			if (elem.hasClass('type-infinite')) {
@@ -96,7 +94,12 @@
 					textTypingEffect(elem, (typingContent.length - 1), 'left');
 				}, 1000);
 			} else {
-				elem.removeClass('typing');
+				// Retain blinking cursor on last element
+				if (elem.prop('typingSeqElements') != undefined) {
+					elem.removeProp('typingSeqElements');
+
+					elem.removeClass('typing');
+				}
 			}
 
 			return;
