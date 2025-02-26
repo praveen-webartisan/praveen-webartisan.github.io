@@ -1,3 +1,6 @@
+var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+
 (function($) {
 	const matrixEffectTileSize = 20, matrixEffectFadeFactor = 0.05;
 
@@ -230,6 +233,16 @@
 	$(document).ready(function() {
 		initTypingEffect();
 		initMatrixEffect();
+
+		var s1 = document.createElement("script"),
+	            s0 = document.getElementsByTagName("script")[0];
+
+		s1.async = true;
+		s1.src  ='https://embed.tawk.to/67beb0e8c62e09190bd5ecd5/1il0e63et';
+		s1.charset  ='UTF-8';
+		s1.setAttribute('crossorigin','*');
+
+		s0.parentNode.insertBefore(s1,s0);
 	});
 
 }) (jQuery);
